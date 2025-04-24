@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <style>
+    body {
+      font-family: sans-serif;
+      padding: 20px;
+      background: #2d2d2d;
+      color: #f5f5f5;
+    }
+
+    .example {
+      margin-bottom: 30px;
+    }
+
+    .box, .button-box {
+      transition: all 0.3s ease;
+    }
+
+    button {
+      margin-top: 10px;
+      padding: 8px 12px;
+      cursor: pointer;
+      background-color: #444;
+      color: #fff;
+      border: none;
+      border-radius: 5px;
+    }
+
+    button:hover {
+      background-color: #666;
+    }
+
+    .box {
+      padding: 20px;
+      border-radius: 5px;
+    }
+
+    /* Darker Colors for Boxes */
+    .box {
+      background-color: #3a3a3a;
+    }
+
+    .button-box {
+      background-color: #4e4e4e;
+    }
+
+    /* Adjusting colors for individual boxes */
+    .box1 {
+      background-color: #6a4e3d;
+    }
+
+    .box2 {
+      background-color: #4f9b89;
+    }
+
+    .box3 {
+      background-color: #d13e5b;
+    }
+
+    /* Flexbox colors */
+    .flex-box {
+      padding: 20px;
+      color: white;
+      font-weight: bold;
+      text-align: center;
+      border-radius: 5px;
+    }
+
+    /* Specific flex container colors */
+    .flex-container {
+      display: flex;
+      gap: 10px;
+      margin-top: 10px;
+      transition: all 0.3s ease;
+    }
+
+    /* Buttons & hover state */
+    button {
+      margin-top: 10px;
+      padding: 8px 12px;
+      cursor: pointer;
+      background-color: #444;
+      color: #fff;
+      border: none;
+      border-radius: 5px;
+    }
+
+    button:hover {
+      background-color: #666;
+    }
+  </style>
+</head>
+<body>
+
+<h2>🔷 Practice Set 1: <code>padding</code> (Space Inside the Element)</h2>
+
+<div class="example">
+  <h3>🔹 Practice 1.1: Basic Padding Box</h3>
+  <div id="box1" class="box box1" style="padding: 20px;">
+    This box has 20px padding on all sides.
+  </div>
+  <button onclick="document.getElementById('box1').style.padding = '10px 30px'">
+    ✅ Try: Change to <code>padding: 10px 30px;</code>
+  </button>
+</div>
+
+<div class="example">
+  <h3>🔹 Practice 1.2: Padding for a Button</h3>
+  <button id="button1" class="button-box" style="padding: 10px 20px;">Click Me</button><br>
+  <button onclick="document.getElementById('button1').style.padding = '20px 40px'">
+    ✅ Try: Make it more clickable!
+  </button>
+</div>
+
+<div class="example">
+  <h3>🔹 Practice 1.3: Different Padding Sides</h3>
+  <div id="box3" class="box box3" style="padding-top: 30px; padding-left: 10px;">
+    Top padding is more!
+  </div>
+  <button onclick="document.getElementById('box3').style.padding = '30px 10px 5px 0'">
+    ✅ Try: Use <code>padding: 30px 10px 5px 0;</code>
+  </button>
+</div>
+
+<h2>🔷 Practice Set 2: <code>margin</code> (Space Outside the Element)</h2>
+
+<div class="example">
+  <h3>🔹 Practice 2.1: Margin Between Two Boxes</h3>
+  <div id="boxA" class="box box2" style="margin-bottom: 20px; padding: 10px;">
+    First box
+  </div>
+  <div class="box box2" style="padding: 10px;">Second box</div>
+  <button onclick="document.getElementById('boxA').style.marginBottom = '50px'">
+    ✅ Try: Increase <code>margin-bottom</code> to 50px
+  </button>
+</div>
+
+<div class="example">
+  <h3>🔹 Practice 2.2: Auto Margin Centering</h3>
+  <div id="centerBox" class="box box3" style="width: 200px; margin: auto; padding: 10px;">
+    Centered Box
+  </div>
+  <button onclick="document.getElementById('centerBox').style.border = '2px solid darkgreen'">
+    ✅ Try: Add border to see actual size
+  </button>
+</div>
+
+<div class="example">
+  <h3>🔹 Practice 2.3: Margin on All Sides</h3>
+  <p id="marginBox" class="box box1" style="margin: 30px; padding: 10px;">
+    Margins make room outside the element.
+  </p>
+  <button onclick="document.getElementById('marginBox').style.margin = '30px 10px'">
+    ✅ Try: Change margin to <code>30px 10px</code>
+  </button>
+  <button onclick="document.getElementById('marginBox').style.margin = '0 auto'">
+    ✅ Try: Use <code>margin: 0 auto</code> to center
+  </button>
+</div>
+
+<h2>🔷 Practice Set 3: <code>flexbox</code> (Smart Layouts)</h2>
+
+<div class="example">
+  <h3>🔹 Practice 3.1: Simple Horizontal Layout</h3>
+  <div id="flex1" class="flex-container" style="justify-content: flex-start;">
+    <div class="flex-box" style="background: lightcoral;">Box 1</div>
+    <div class="flex-box" style="background: lightseagreen;">Box 2</div>
+  </div>
+  <button onclick="document.getElementById('flex1').innerHTML += '<div class=\'flex-box\' style=\'background: lightblue;\'>Box 3</div>'">
+    ✅ Try: Add another box
+  </button>
+  <button onclick="document.getElementById('flex1').style.justifyContent = 'space-between'">
+    ✅ Try: Use <code>justify-content: space-between</code>
+  </button>
+</div>
+
+<div class="example">
+  <h3>🔹 Practice 3.2: Centering with Flex</h3>
+  <div id="flex2" class="flex-container" style="height: 100px; justify-content: center; align-items: center;">
+    <div class="flex-box" style="background: tomato;">Centered</div>
+  </div>
+  <button onclick="document.getElementById('flex2').style.alignItems = 'flex-start'">
+    ✅ Try: <code>align-items: flex-start</code>
+  </button>
+  <button onclick="document.getElementById('flex2').style.alignItems = 'flex-end'">
+    ✅ Try: <code>align-items: flex-end</code>
+  </button>
+</div>
+
+<div class="example">
+  <h3>🔹 Practice 3.3: Responsive Columns</h3>
+  <div class="flex-container" style="flex-wrap: wrap;">
+    <div class="flex-box" style="flex: 1 1 200px; background: skyblue;">Column 1</div>
+    <div class="flex-box" style="flex: 1 1 200px; background: lightpink;">Column 2</div>
+    <div class="flex-box" style="flex: 1 1 200px; background: lightgray;">Column 3</div>
+  </div>
+  <p>✅ <strong>Try:</strong> Resize the screen to see them wrap!</p>
+</div>
+
+</body>
+</html>
